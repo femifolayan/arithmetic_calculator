@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+    <title>Femi Samson Folayan | Basic Arithmetic Calculator</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset style="width: 500px;">
+            
+            <legend style="background-color: coral;">Basic Arithmetic Calculator</legend>
+          
+            <script type="text/javascript">
+                function sum()
+                {
+                    let text1 = parseInt(document.getElementById("text1").value);
+                    let text3= parseInt(document.getElementById("text3").value);                      
+                    let operator = document.getElementById("operator").value;
+      
+                     if( operator==='+'){
+                         let answer = document.getElementById('text4').value=text1+text3;
+                     }
+                     if( operator==='-'){
+                         let answer = document.getElementById('text4').value=text1-text3;
+                     }      
+                     if( operator==='*'){
+                         let answer = document.getElementById('text4').value=text1*text3;
+                     }   
+                     if( operator==='/'){
+                         let answer = document.getElementById('text4').value=text1/text3;
+                     }             
+                  }
+    
+             </script> 
+
+            <input type="number" name="text1" id="text1" step="any" onkeyup="sum()" placeholder="Text 1" required><br><br>
+            
+            <select name="text2" id="operator" step="any" onchange="sum()" required>
+            <option value="">select operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select> <br><br>
+               
+            <input type="number" name="text3" id="text3" step="any" onkeyup="sum()" placeholder="Text 3" required><br><br>
+   
+            <input type="number" name="text4" id="text4" step="any" onkeyup="sum()" placeholder="Result" readonly required>
+            </fieldset>
+            
+    </form>
+</body>
+</html>
